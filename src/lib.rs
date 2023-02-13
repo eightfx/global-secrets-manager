@@ -4,7 +4,7 @@
 //! 	This code allows you to create a global constant of the same type as the name of Secrets Manager by simply creating a structure that matches the key pair set in Secrets Manager. 
 //! 	This way, you can access the secret values stored in Secrets Manager without writing any code to fetch them from AWS. 
 //!
-//! Pros:
+//! ## Pros:
 //! - Key pairs can be retrieved by simply defining a struct with the same structure as the key pair set in Secrets Manager
 //! - Key pairs are defined as global constants, so they can be used from anywhere
 //! - Lazy evaluation by once_cell::sync::Lazy
