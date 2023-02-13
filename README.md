@@ -11,20 +11,22 @@ This way, you can access the secret values stored in Secrets Manager without wri
 
 # Example code
 
-    use global_secrets_manager::GlobalSecretsManager;
+```rust
+use global_secrets_manager::GlobalSecretsManager;
 
-    /// Please use the same name as Secrets Manager for the name of the structure
-    /// Please set the keys of Secrets Manager without any omission or excess
-    #[derive(GlobalSecretsManager)]
-    #[derive(Debug, serde::Deserialize)]
-    pub struct SampleSecrets{ 
-        key1: String,
-        key2: String,
-    }
-    fn main(){
-        dbg!(&SampleSecrets.key1); //-> value1
-        dbg!(&SampleSecrets.key2); //-> value2
-    }
+/// Please use the same name as Secrets Manager for the name of the structure
+/// Please set the keys of Secrets Manager without any omission or excess
+#[derive(GlobalSecretsManager)]
+#[derive(Debug, serde::Deserialize)]
+pub struct SampleSecrets{ 
+	key1: String,
+	key2: String,
+}
+fn main(){
+	dbg!(&SampleSecrets.key1); //-> value1
+	dbg!(&SampleSecrets.key2); //-> value2
+}
+```
 
 # Advance Preparation
 
@@ -100,10 +102,12 @@ Create a .env file in your repository and enter your credential information as f
 
 For the structure
 
-	struct SampleSecrets{
-		key1:String,
-		key2:String
-	}
+```rust
+struct SampleSecrets{
+	key1:String,
+	key2:String
+}
+```
 
 the same name global constant
 
