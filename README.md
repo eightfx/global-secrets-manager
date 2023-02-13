@@ -83,7 +83,7 @@ For the sake of explanation, let's assume that the name of Secrets Manager is Sa
 Please obtain your credential information.
 If you are using AWS CLI, you can get it with the following command.
 
-cat ~/.aws/credentials
+	cat ~/.aws/credentials
 
 
 ## .env settings
